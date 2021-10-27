@@ -44,7 +44,7 @@ Few-shot object detection은 퓨샷 러닝과 객체 검출이 합쳐진 문제�
 
 TFA는 크게 base training과 few-shot fine-tuning 단계로 나뉜다. 먼저 첫번째 base training 단계에서는 base class의 충분한 영상을 이용하여 detector 모델 전체를 학습한다. 그 다음 few-shot fine-tuning 단계에서는 base class와 새로운 class의 소량의 영상만을 이용하여 모델의 다른 부분들은 다 freeze하고 마지막 box classifier와 box regressor만 fine-tuning을 진행한다. 이는 이전의 전체 모델을 fine-tuning하던 jointly fine-tuning보다 성능 향상을 보이며 base class로부터 학습한 feature extractor가 새로운 class에 대해 잘 전이(transfer)될 수 있음을 보였다. 
 
-
+ 
 
 ## 3. Motivation
 
