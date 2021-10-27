@@ -4,6 +4,9 @@ description: Sun et al. / FSCE - Few-Shot Object Detection via Contrastive Propo
 
 # FSCE: Few-Shot Object Detection via Contrastive Proposal Encoding \[Kor\]
 
+
+N개의 RoI box features는 $\{z_i,u_i,y_i\}_{i=1}^N$ 로 표현된다. z는 contrastive feature, u는 IoU score, y는 ground truth label을 나타낸다. $N_{y}$ 는 같은 label y에 해당하는 proposal의 개수이다.  ~는 normalized feature를 나타내며, $\tilde{z_i}\tilde{z_j}$ 는 i번째와 j번째 proposal간의 cosine similarity를 의미한다. 따라서 $L_{z}$ 는 같은 label이면 가깝게, 다른 label이면 멀게 만듦으로써, 각 class는 더 tight한 cluster를 만들고, cluster간의 거리는 커지게 된다.
+
 ##  1. Problem definition
 
 **Few-Shot Object Detection (FSOD) = Few-shot learning + Object detection **
